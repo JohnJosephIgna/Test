@@ -1,2 +1,2 @@
-write-host "$env:testenv"
-write-output "$env:testenv"
+write-host "$testvar"
+write-output "$testvar"
