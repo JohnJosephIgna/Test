@@ -4,7 +4,7 @@ $Session = New-PSSession -ConfigurationName Microsoft.Exchange -ConnectionUri ht
 Import-PSSession $Session -AllowClobber | Out-Null
 
 $CSVFilename = read-host "Enter File Name "
-write-host("")
+write-host ""
 $OutputFile = $CSVFilename + '.csv'
 $OutputPath = 'C:\Users\' + $env:UserName + '\Desktop\' + $Outputfile
 
