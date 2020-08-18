@@ -9,4 +9,4 @@ $OutputFile = $CSVFilename + ".csv"
 $OutputPath = "C:\Users\" + $env:UserName + "\Desktop\" + $Outputfile
 
 Get-Mailbox -ResultSize Unlimited | Select Identity, UserPrincipalName, PrimarySmtpAddress, RecipientTypeDetails | Export-Csv -Path "$Outputpath"
-write-host "Successfully Exported to Desktop"
+Write-Host "Successfully Exported to Desktop"
