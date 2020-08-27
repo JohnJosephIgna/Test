@@ -1,7 +1,7 @@
 Get-PSSession | Remove-PSSession
 $Office365Credentials  = Get-Credential
-$Session = New-PSSession -ConfigurationName "Microsoft.Exchange" -ConnectionUri "https://outlook.office365.com/powershell-liveid/" -Credential $Office365credentials -Authentication "Basic"
-Import-PSSession $Session | Out-Null
+$Session = New-PSSession -ConfigurationName Microsoft.Exchange -ConnectionUri https://outlook.office365.com/powershell-liveid/ -Credential $Office365credentials -Authentication Basic -AllowRedirection
+Import-PSSession $Session -AllowClobber | Out-Null
 
 $CSVFilename = Read-Host "Enter File Name "
 Write-Host ""
